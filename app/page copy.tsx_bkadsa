@@ -1,33 +1,27 @@
 import Link from "next/link";
 
-export default function Navigation() {
+export default function Component() {
   return (
     <div className="min-h-screen bg-[#000000] text-white relative overflow-hidden">
       {/* Navigation */}
       <nav className="flex justify-between items-center p-6 relative z-10">
         <div className="flex gap-4">
-          <Link href="/about">
-            <button className="cursor-pointer bg-[#95ff00] text-[#000000] px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-opacity">
-              About Us
-            </button>
-          </Link>
-          <Link href="/products">
-            <button className="cursor-pointer bg-[#95ff00] text-[#000000] px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-opacity">
-              Products & Solutions
-            </button>
-          </Link>
-          <Link href="/pricing">
-            <button className="cursor-pointer bg-[#95ff00] text-[#000000] px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-opacity">
-              Pricing
-            </button>
-          </Link>
+            <Link href="/about">
+          <button className="cursor-pointer bg-[#95ff00] text-[#000000] px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-opacity">
+            About Us
+          </button>
+            </Link>
+          <button className="bg-[#95ff00] text-[#000000] px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-opacity">
+            Products&Solutions
+          </button>
+          <button className="bg-[#95ff00] text-[#000000] px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-opacity">
+            Pricing
+          </button>
         </div>
         <div className="relative">
-          <Link href="/contact">
-            <button className="cursor-pointer bg-[#000000] border-2 border-[#95ff00] text-[#95ff00] px-8 py-3 rounded-full font-bold text-sm hover:bg-[#95ff00] hover:text-[#000000] transition-all">
-              Contact Us
-            </button>
-          </Link>
+          <button className="bg-[#000000] border-2 border-[#95ff00] text-[#95ff00] px-8 py-3 rounded-full font-bold text-sm hover:bg-[#95ff00] hover:text-[#000000] transition-all">
+            Contact Us
+          </button>
           {/* Decorative arrow */}
           <div className="absolute -right-16 top-1/2 transform -translate-y-1/2">
             <svg width="80" height="60" viewBox="0 0 80 60" className="fill-[#95ff00]">
@@ -37,7 +31,6 @@ export default function Navigation() {
           </div>
         </div>
       </nav>
-
 
       {/* Hero Section */}
       <div className="flex justify-center items-center py-16 px-6">
