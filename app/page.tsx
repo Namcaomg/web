@@ -45,7 +45,7 @@ export default function Component() {
         </div>
 
         {/* Agency Name */}
-        <div className="text-left">
+        <div className="absolute bottom-20 left-20 p-6">
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black leading-none">
             <span className="text-[#ff3366]">#THE</span>
             <br />
