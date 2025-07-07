@@ -1,111 +1,61 @@
-import Link from "next/link";
+import Link from "next/link"
 
-export default function Navigation() {
+export default function Component() {
   return (
-    <div className="min-h-screen bg-[#000000] text-white relative overflow-hidden">
+    <div className="min-h-screen bg-[#000000] text-white">
       {/* Navigation */}
-      <nav className="flex justify-between items-center p-6 relative z-10">
-        <div className="flex gap-4">
-          <Link href="/about">
-            <button className="cursor-pointer bg-[#95ff00] text-[#000000] px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-opacity">
-              About Us
-            </button>
+      <nav className="flex items-center justify-between p-6 md:p-8">
+        <div className="flex items-center gap-4">
+          <Link
+            href="/about"
+            className="bg-[#ff3366] text-white px-6 py-3 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            About Us
           </Link>
-          <Link href="/products">
-            <button className="cursor-pointer bg-[#95ff00] text-[#000000] px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-opacity">
-              Products & Solutions
-            </button>
+          <Link
+            href="/products"
+            className="bg-[#ff3366] text-white px-6 py-3 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            Products&Solutions
           </Link>
-          <Link href="/pricing">
-            <button className="cursor-pointer bg-[#95ff00] text-[#000000] px-6 py-3 rounded-full font-bold text-sm hover:opacity-90 transition-opacity">
-              Pricing
-            </button>
+          <Link
+            href="/pricing"
+            className="bg-[#ff3366] text-white px-6 py-3 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            Pricing
           </Link>
         </div>
-        <div className="relative">
-          <Link href="/contact">
-            <button className="cursor-pointer bg-[#000000] border-2 border-[#95ff00] text-[#95ff00] px-8 py-3 rounded-full font-bold text-sm hover:bg-[#95ff00] hover:text-[#000000] transition-all">
-              Contact Us
-            </button>
-          </Link>
-          {/* Decorative arrow */}
-          <div className="absolute -right-16 top-1/2 transform -translate-y-1/2">
-            <svg width="80" height="60" viewBox="0 0 80 60" className="fill-[#95ff00]">
-              <path d="M10 30 Q40 10 70 30 Q40 50 10 30 Z" />
-              <path d="M50 25 L75 30 L50 35 Z" />
-            </svg>
-          </div>
-        </div>
+        <Link
+          href="/contact"
+          className="bg-transparent border-2 border-[#ff3366] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#ff3366] transition-colors"
+        >
+          Contact Us
+        </Link>
       </nav>
 
-
       {/* Hero Section */}
-      <div className="flex justify-center items-center py-16 px-6">
-        <div className="relative bg-[#8f6464] rounded-3xl px-16 py-12 max-w-4xl w-full">
-          {/* Starburst graphic */}
-          {/* <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
-            <svg width="80" height="80" viewBox="0 0 80 80" className="fill-[#95ff00]">
-              <g transform="translate(40,40)">
-                {Array.from({ length: 16 }).map((_, i) => (
-                  <rect key={i} x="-2" y="-25" width="4" height="20" transform={`rotate(${i * 22.5})`} />
-                ))}
-              </g>
-            </svg>
-          </div> */}
-
-          {/* Main text */}
-          <div className="text-center">
-            <h1 className="text-6xl font-black leading-tight">
-              <span className="text-[#95ff00]">#THE SAMPLE</span>
-              <br />
-              <span className="text-[#000000]">AGENCY</span>
-            </h1>
-          </div>
-
-          {/* Brush strokes */}
-          <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
-            <svg width="120" height="80" viewBox="0 0 120 80" className="fill-[#95ff00]">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <rect
-                  key={i}
-                  x={i * 12}
-                  y={10 + i * 2}
-                  width="8"
-                  height="60"
-                  transform={`rotate(${15 + i * 5} ${i * 12 + 4} ${40 + i * 2})`}
-                />
-              ))}
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      {/* Services Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 pb-16 max-w-7xl mx-auto">
-        <div className="bg-[#95ff00] text-[#000000] rounded-3xl p-8">
-          <h3 className="text-xl font-black mb-4">YouTube Strategy & Growth</h3>
-          <p className="text-sm font-medium leading-relaxed">
-            We help creators and brands grow with smart strategies, optimized content, and data-driven insights. From
-            launch to viral — we guide every step.
-          </p>
+      <main className="flex flex-col items-center justify-center px-6 py-16 md:py-24">
+        {/* Main Headline */}
+        <div className="text-center mb-16 md:mb-24">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            A new <span className="text-[#ff3366]">era</span> of social{" "}
+            <span className="text-[#ff3366]">marketing</span>
+            <span className="text-[#ff3366] ml-2">↘</span>
+          </h1>
         </div>
 
-        <div className="bg-[#95ff00] text-[#000000] rounded-3xl p-8">
-          <h3 className="text-xl font-black mb-4">Music Production & Sound Design</h3>
-          <p className="text-sm font-medium leading-relaxed">
-            Original beats, mixing, mastering, and sound design built for creators, artists, and brands who want to
-            stand out with a unique sonic identity.
-          </p>
+        {/* Agency Name */}
+        <div className="text-left">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black leading-none">
+            <span className="text-[#ff3366]">#THE</span>
+            <br />
+            <span className="text-[#ff3366]">SAMPLE</span>
+            <br />
+            <span className="text-white">AGENCY</span>
+            <span className="text-[#ff3366] ml-4">↘</span>
+          </h2>
         </div>
-
-        <div className="bg-[#95ff00] text-[#000000] rounded-3xl p-8">
-          <h3 className="text-xl font-black mb-4">Creative Video Production</h3>
-          <p className="text-sm font-medium leading-relaxed">
-            High-quality, engaging videos tailored for YouTube. From editing to thumbnails, we craft visuals that
-            capture attention and boost performance.
-          </p>
-        </div>
-      </div>
+      </main>
     </div>
   )
 }
