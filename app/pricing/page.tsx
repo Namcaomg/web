@@ -28,7 +28,7 @@ export default function Component() {
       {/* Pricing Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
         {/* YouTube Growth Card */}
-        <div className="bg-[#ca3e3e] border-none rounded-3xl p-6">
+        <div className="bg-[#ff3366] border-none rounded-3xl p-6">
           <div className="mb-4">
             <h2 className="text-[#000000] text-2xl font-bold">YouTube Growth</h2>
           </div>
@@ -102,7 +102,7 @@ export default function Component() {
         </div>
 
         {/* Music Production Card */}
-        <div className="bg-[#ca3e3e] border-none rounded-3xl p-6">
+        <div className="bg-[#ff3366] border-none rounded-3xl p-6">
           <div className="mb-4">
             <h2 className="text-[#000000] text-2xl font-bold">Music Production</h2>
           </div>
@@ -172,7 +172,7 @@ export default function Component() {
         </div>
 
         {/* Video Creation Card */}
-        <div className="bg-[#ca3e3e] border-none rounded-3xl p-6">
+        <div className="bg-[#ff3366] border-none rounded-3xl p-6">
           <div className="mb-4">
             <h2 className="text-[#000000] text-2xl font-bold">Video Creation</h2>
           </div>
